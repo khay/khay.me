@@ -5,7 +5,9 @@ Personal site for K (Okkar). One static page, plain HTML and CSS, no build step.
 ## Files
 
 - `index.html` — the page
-- `styles.css` — layout, type, and light/dark colors
+- `styles.css` — layout, type, color, and motion
+- `fonts/` — self-hosted Fraunces and Figtree (SIL Open Font License). No font CDN.
+- `grain.png` — a small paper-grain tile
 - `favicon.svg` — the K mark
 - `CNAME` — `khay.me`
 - `.nojekyll` — serve files as-is
@@ -27,10 +29,10 @@ Anything else is a placeholder. On the page it shows up as italic text in bracke
 
 ```html
 <!-- TODO(K): replace the next paragraph with a short bio in your own words. -->
-<p class="slot">[placeholder: short bio]</p>
+<p class="bio slot">[placeholder: short bio]</p>
 ```
 
-Replace the bracketed text with your own words and delete the comment. Leave the `slot` class off once the sentence is real, or the text stays muted and italic. For selected work, duplicate the `<li>` for each project. For the photo, swap the placeholder for an `<img>` in the same folder (see the comment in the about section).
+Replace the bracketed text with your own words and delete the comment. Remove the word `slot` from the class once the sentence is real, or the text stays muted and italic. Keep the other class (`bio`, `lede`, `now-copy`, `work-title`) so the layout stays put. For selected work, duplicate the `<li>` for each project. For the photo, swap the placeholder for an `<img>` in the same folder (see the comment in the about section).
 
 An optional share image is noted in the `<head>` (`og:image` / `twitter:image`). Skip it until you have one.
 
