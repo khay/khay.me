@@ -4,9 +4,11 @@ Personal site for K. One static page, plain HTML and CSS, no build step. GitHub 
 
 ## Files
 
-- `index.html` — the page: the portrait, a short about paragraph, and icon links
-- `styles.css` — layout, type, and light/dark colors
-- `avatar.jpg` — K's picture from X, used in place of the name and as the browser icon
+- `index.html` — the page: the portrait in a drawn moon, a short about paragraph, and icon links
+- `styles.css` — layout, type, moon, and light/dark colors
+- `avatar.jpg` — K's picture from X, used in the moon and as the browser icon
+- `grain.png` — paper grain, tiled over the full page
+- `fonts/` — self-hosted Fraunces for the about text (SIL Open Font License)
 - `CNAME` — `khay.me`
 - `.nojekyll` — serve files as-is
 
