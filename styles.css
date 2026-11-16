@@ -198,7 +198,6 @@ figure {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
   grid-template-areas:
-    "kicker kicker"
     "title copy";
   column-gap: 2.5rem;
   align-items: end;
@@ -209,10 +208,16 @@ figure {
   position: absolute;
   z-index: 0;
   left: -0.75rem;
-  top: 1.15rem;
+  top: 0.15rem;
   width: min(23.5rem, 46%);
   height: auto;
   pointer-events: none;
+}
+
+.scene .wash {
+  transform-box: view-box;
+  transform-origin: 41.25% 47%;
+  animation: breathe 8s ease-in-out infinite;
 }
 
 .scene .wash circle:nth-child(1) { fill: var(--sun-a); }
@@ -222,6 +227,9 @@ figure {
 .scene .rings {
   stroke: var(--ring);
   stroke-width: 1.25;
+  transform-box: view-box;
+  transform-origin: 41.25% 47%;
+  animation: orbit 72s linear infinite;
 }
 
 .scene .marks {
@@ -230,7 +238,13 @@ figure {
   stroke-width: 1.15;
 }
 
-.scene .marks circle { stroke: none; }
+.scene .marks circle {
+  stroke: none;
+  animation: twinkle 3.8s ease-in-out infinite;
+}
+
+.scene .marks circle:nth-child(2) { animation-delay: 1.2s; }
+.scene .marks circle:nth-child(3) { animation-delay: 2.2s; }
 
 .scene .sprig {
   stroke: var(--sprig);
@@ -238,7 +252,6 @@ figure {
   stroke-linecap: round;
 }
 
-.kicker,
 h2 {
   display: flex;
   align-items: center;
@@ -251,13 +264,6 @@ h2 {
   line-height: 1.4;
   text-transform: uppercase;
   color: var(--ink);
-}
-
-.kicker {
-  grid-area: kicker;
-  position: relative;
-  z-index: 1;
-  margin-bottom: 0.35rem;
 }
 
 .mark {
@@ -300,7 +306,7 @@ h1 {
 
 .lede {
   margin-top: 0.9rem;
-  max-width: 16em;
+  max-width: 18em;
   font-family: var(--serif);
   font-style: italic;
   font-weight: 500;
@@ -446,7 +452,7 @@ h2 {
   list-style: none;
   padding: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(15.5rem, 1fr));
   gap: 0.9rem;
 }
 
@@ -592,7 +598,6 @@ footer p {
   .hero {
     grid-template-columns: 1fr;
     grid-template-areas:
-      "kicker"
       "title"
       "copy";
     align-items: start;
@@ -606,7 +611,7 @@ footer p {
   .scene {
     width: 12.25rem;
     left: -1.6rem;
-    top: 1.35rem;
+    top: 0.15rem;
   }
 
   .hero-copy {
@@ -680,7 +685,20 @@ footer p {
   to { opacity: 1; transform: none; }
 }
 
+@keyframes orbit {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.045); }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.28; }
+  50% { opacity: 1; }
+}
+
 .scene { animation: bloom 1.15s cubic-bezier(0.16, 1, 0.3, 1) both; }
-.kicker { animation: rise 0.7s cubic-bezier(0.16, 1, 0.3, 1) both; }
 h1 { animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.08s both; }
-.hero-copy { animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.18s both; }
+.hero-copy { animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.16s both; }

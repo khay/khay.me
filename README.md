@@ -14,25 +14,32 @@ Personal site for K (Okkar). One static page, plain HTML and CSS, no build step.
 
 ## What is already true
 
-These are the only facts on the page:
+Facts already on the page, from K and from his public LinkedIn and GitHub profiles:
 
 - Name: K, who also goes by Okkar
-- Based in Singapore
+- The opening line is the bio on his GitHub profile
+- Solutions architect at Trusted Services; before that, software engineer there, and software architect (and earlier backend developer) at The Amdon Group
+- He likes anime and games
 - GitHub: https://github.com/khay
 - X: https://x.com/khayusaki
+- LinkedIn: https://www.linkedin.com/in/khayusaki/
+
+The photo is still a placeholder. Singapore is not written on the page.
 
 There is no email address yet. Add one only when it should be public.
 
 ## Editing
 
-Anything else is a placeholder. On the page it shows up as italic text in brackets, for example `[placeholder: short bio]`. The line above it in `index.html` is an HTML comment:
+The photo is still a placeholder. It shows up in brackets, with an HTML comment above it:
 
 ```html
-<!-- TODO(K): replace the next paragraph with a short bio in your own words. -->
-<p class="bio slot">[placeholder: short bio]</p>
+<!-- TODO(K): replace this figure with a photo, for example
+     <img src="photo.jpg" alt="K" width="800" height="1000">
+     then delete this comment and the placeholder. -->
+<p class="slot photo-slot">[placeholder: photo]</p>
 ```
 
-Replace the bracketed text with your own words and delete the comment. Remove the word `slot` from the class once the sentence is real, or the text stays muted and italic. Keep the other class (`bio`, `lede`, `now-copy`, `work-title`) so the layout stays put. For selected work, duplicate the `<li>` for each project. For the photo, swap the placeholder for an `<img>` in the same folder (see the comment in the about section).
+Replace that block with an image and delete the comment.
 
 An optional share image is noted in the `<head>` (`og:image` / `twitter:image`). Skip it until you have one.
 
