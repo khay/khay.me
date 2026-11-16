@@ -5,7 +5,7 @@ Personal site for K. One static page, plain HTML and CSS, no build step. GitHub 
 ## Files
 
 - `index.html` — the page: the portrait, a short about paragraph, and icon links
-- `scene.js` — the full-page black hole and the moving starfield
+- `scene.js` — the moving starfield behind the page
 - `styles.css` — layout, type, and the dark page
 - `avatar.jpg` — K's picture from X, used as the portrait and the browser icon
 - `fonts/` — self-hosted Fraunces for the about text (SIL Open Font License)
