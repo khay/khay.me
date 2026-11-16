@@ -4,9 +4,9 @@ Personal site for K. One static page, plain HTML and CSS, no build step. GitHub 
 
 ## Files
 
-- `index.html` — the page: the name, a short about paragraph, and icon links
+- `index.html` — the page: the portrait, a short about paragraph, and icon links
 - `styles.css` — layout, type, and light/dark colors
-- `avatar.jpg` — K's picture from X, used as the site icon and the X link
+- `avatar.jpg` — K's picture from X, used in place of the name and as the browser icon
 - `CNAME` — `khay.me`
 - `.nojekyll` — serve files as-is
 
