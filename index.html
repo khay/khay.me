@@ -7,7 +7,7 @@
   <meta name="description" content="Solutions architect. I design software and the architecture around it. I like anime and games.">
   <meta name="author" content="K">
   <meta name="color-scheme" content="dark">
-  <meta name="theme-color" content="#08090c">
+  <meta name="theme-color" content="#000">
   <link rel="canonical" href="https://khay.me/">
   <link rel="icon" href="avatar.jpg" type="image/jpeg" sizes="192x192">
   <link rel="apple-touch-icon" href="avatar.jpg">
@@ -21,26 +21,13 @@
   <meta name="twitter:title" content="K">
   <meta name="twitter:description" content="Solutions architect. I design software and the architecture around it. I like anime and games.">
   <link rel="stylesheet" href="styles.css">
-  <style>html { background: #08090c }</style>
+  <style>html { background: #000 }</style>
 </head>
 <body>
-  <div class="sky" aria-hidden="true">
-    <span></span><span></span><span></span><span></span><span></span><span></span>
-  </div>
-  <div class="grain" aria-hidden="true"></div>
+  <canvas id="space" aria-hidden="true"></canvas>
   <main>
     <h1>
-      <span class="hole">
-        <span class="halo" aria-hidden="true"></span>
-        <span class="motes" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span>
-        <span class="disk" aria-hidden="true"></span>
-        <span class="horizon" aria-hidden="true"></span>
-        <span class="arc over" aria-hidden="true"></span>
-        <span class="arc under" aria-hidden="true"></span>
-        <img src="avatar.jpg" alt="K" width="192" height="192">
-        <span class="photon" aria-hidden="true"></span>
-        <span class="orbit" aria-hidden="true"></span>
-      </span>
+      <img src="avatar.jpg" alt="K" width="192" height="192">
     </h1>
     <p>I'm a solutions architect. I design software, and the architecture around it: scalable systems, and the standards that keep them reliable. I like anime and games.</p>
     <nav aria-label="Social">
@@ -61,5 +48,6 @@
       </a>
     </nav>
   </main>
+  <script src="scene.js"></script>
 </body>
 </html>
