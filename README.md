@@ -4,10 +4,10 @@ Personal site for K. One static page, plain HTML and CSS, no build step. GitHub 
 
 ## Files
 
-- `index.html` — the page: the portrait in a drawn moon, a short about paragraph, and icon links
-- `styles.css` — layout, type, moon, and light/dark colors
-- `avatar.jpg` — K's picture from X, used in the moon and as the browser icon
-- `grain.png` — paper grain, tiled over the full page
+- `index.html` — the page: the portrait set in a black hole, a short about paragraph, and icon links
+- `styles.css` — layout, type, the black hole (event horizon, accretion disk, photon ring), and the dark palette
+- `avatar.jpg` — K's picture from X, used in the black hole and as the browser icon
+- `grain.png` — film grain, tiled faintly over the page
 - `fonts/` — self-hosted Fraunces for the about text (SIL Open Font License)
 - `CNAME` — `khay.me`
 - `.nojekyll` — serve files as-is
@@ -24,7 +24,7 @@ From the repository root:
 python3 -m http.server 8080
 ```
 
-Open http://127.0.0.1:8080. Colors follow the system light or dark setting.
+Open http://127.0.0.1:8080. The page is dark only.
 
 ## GitHub Pages
 
