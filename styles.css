@@ -79,10 +79,18 @@ nav a {
   border-radius: 999px;
 }
 
-nav a svg {
+nav a svg,
+nav a img {
   width: 1.25rem;
   height: 1.25rem;
   display: block;
+}
+
+nav a img {
+  width: 1.45rem;
+  height: 1.45rem;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 nav a:hover {
