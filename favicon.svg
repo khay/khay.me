@@ -1,16 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
   <style>
-    .bg { fill: #221c17 }
-    .fg { fill: #f6f0e6 }
-    .ac { fill: #c45a32 }
+    .bg { fill: #1c1916 }
+    .fg { fill: #faf8f5 }
     @media (prefers-color-scheme: dark) {
-      .bg { fill: #f3ecdf }
-      .fg { fill: #221c17 }
-      .ac { fill: #a33b1e }
+      .bg { fill: #f4f0e8 }
+      .fg { fill: #12110f }
     }
   </style>
   <rect class="bg" width="32" height="32" rx="8"/>
   <path class="fg" d="M9 6.5h3.1v19H9z"/>
   <path class="fg" d="M13.2 16.4 22.4 7h3.7l-9.6 9.6L26.2 25h-3.8l-9.2-8.6z"/>
-  <rect class="ac" x="23.5" y="23.5" width="4.5" height="4.5" rx="1"/>
 </svg>
