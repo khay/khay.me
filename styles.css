@@ -1,0 +1,273 @@
+/* khay.me — colors and type live in the custom properties below. */
+
+:root {
+  color-scheme: light;
+  --bg: #f4f1eb;
+  --fg: #1c1916;
+  --muted: #5e564c;
+  --line: #d5cec3;
+  --slot: #ebe6de;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, "Noto Serif", "Times New Roman", serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, "Noto Sans", Helvetica, Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg: #141311;
+    --fg: #f3efe8;
+    --muted: #c4bdb2;
+    --line: #3a372f;
+    --slot: #1c1b18;
+  }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --muted: var(--fg);
+    --line: var(--fg);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--serif);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+}
+
+p,
+ul,
+figure {
+  margin: 0;
+}
+
+.page {
+  max-width: 35rem;
+  margin-inline: auto;
+  padding: 3.25rem 1.25rem 4rem;
+}
+
+.skip {
+  position: absolute;
+  left: 0.75rem;
+  top: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--fg);
+  color: var(--bg);
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  text-decoration: none;
+  transform: translateY(-150%);
+}
+
+.skip:focus {
+  transform: translateY(0);
+}
+
+.intro .kicker,
+h2 {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+h1 {
+  margin: 0.6rem 0 0;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(4.5rem, 14vw, 6.75rem);
+  line-height: 0.9;
+  letter-spacing: -0.045em;
+}
+
+.aka {
+  margin-top: 0.7rem;
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.lede {
+  margin-top: 1.75rem;
+  font-size: 1.35rem;
+  line-height: 1.45;
+}
+
+section {
+  margin-top: 2.75rem;
+  padding-top: 1.35rem;
+  border-top: 1px solid var(--line);
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+.slot {
+  color: var(--muted);
+  font-style: italic;
+}
+
+.work {
+  list-style: none;
+  padding: 0;
+}
+
+.work li + li {
+  margin-top: 1.35rem;
+}
+
+.work-title {
+  margin-bottom: 0.3rem;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.portrait {
+  margin-top: 1.75rem;
+}
+
+.photo-slot {
+  display: grid;
+  place-items: center;
+  width: min(100%, 13.5rem);
+  aspect-ratio: 4 / 5;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  background: var(--slot);
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.links {
+  list-style: none;
+  padding: 0;
+}
+
+.links a {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  min-height: 2.75rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--line);
+  color: inherit;
+  font-family: var(--sans);
+  font-size: 1rem;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.link-name {
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+}
+
+.link-url {
+  color: var(--muted);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.links a:hover .link-name,
+.links a:focus-visible .link-name {
+  text-decoration-thickness: 2px;
+}
+
+footer {
+  margin-top: 3rem;
+  padding-top: 1.15rem;
+  border-top: 1px solid var(--line);
+}
+
+footer p {
+  font-family: var(--sans);
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--fg);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: #e4d3b4;
+  color: #1c1916;
+}
+
+@media (prefers-color-scheme: dark) {
+  ::selection {
+    background: #4a4338;
+    color: #f3efe8;
+  }
+}
+
+@media (min-width: 800px) {
+  .page {
+    padding: 6.25rem 1.5rem 5rem;
+  }
+}
+
+@media (forced-colors: active) {
+  .photo-slot,
+  .links a,
+  section,
+  footer {
+    border-color: CanvasText;
+  }
+}
+
+@media print {
+  :root {
+    --bg: #fff;
+    --fg: #000;
+    --muted: #000;
+    --line: #000;
+    --slot: #fff;
+  }
+
+  .page {
+    max-width: none;
+    padding: 0;
+  }
+
+  .skip {
+    display: none;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
